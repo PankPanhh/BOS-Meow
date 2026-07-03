@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+.next/
+coverage/
+
+# Environment
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/settings.json
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-journal
+
+# Uploads
+uploads/
+
+# Docker
+docker-data/
+
+# Misc
+*.tmp
+*.bak

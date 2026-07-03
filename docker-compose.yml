@@ -1,0 +1,95 @@
+version: "3.9"
+
+name: bos
+
+services:
+
+  postgres:
+
+    image: postgres:17
+
+    container_name: bos-postgres
+
+    restart: always
+
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      TZ: ${TZ}
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+
+      interval: 10s
+
+      timeout: 5s
+
+      retries: 5
+
+    networks:
+      - bos-network
+
+  redis:
+
+    image: redis:7-alpine
+
+    container_name: bos-redis
+
+    restart: always
+
+    ports:
+      - "6379:6379"
+
+    command: redis-server --appendonly yes
+
+    volumes:
+      - redis_data:/data
+
+    networks:
+      - bos-network
+
+  pgadmin:
+
+    image: dpage/pgadmin4:latest
+
+    container_name: bos-pgadmin
+
+    restart: always
+
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+
+    ports:
+      - "5050:80"
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+    networks:
+      - bos-network
+
+networks:
+
+  bos-network:
+
+    driver: bridge
+
+volumes:
+
+  postgres_data:
+
+  redis_data:
+
+  pgadmin_data:
