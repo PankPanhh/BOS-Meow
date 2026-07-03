@@ -1,0 +1,62 @@
+/**
+ * colors.css
+ * -----------------------------------------------------------------------
+ * Part 01 — Design Tokens
+ * Semantic color layer. Components should reference THESE variables
+ * (--color-bg-app, --color-text-primary, ...), never the raw
+ * --color-indigo-500 / --color-gray-* scale directly. This is what lets
+ * us re-theme later without touching component code.
+ * -----------------------------------------------------------------------
+ */
+
+:root {
+    /* Surfaces */
+    --color-bg-app: var(--color-gray-50);
+    /* #F5F7FB — never pure white */
+    --color-bg-surface: var(--color-gray-0);
+    /* card / panel background */
+    --color-bg-subtle: var(--color-gray-100);
+    --color-bg-hover: var(--color-gray-100);
+    --color-bg-disabled: var(--color-gray-100);
+
+    /* Text */
+    --color-text-primary: var(--color-gray-900);
+    --color-text-secondary: var(--color-gray-600);
+    --color-text-tertiary: var(--color-gray-400);
+    --color-text-disabled: var(--color-gray-300);
+    --color-text-inverse: var(--color-gray-0);
+    --color-text-link: var(--color-indigo-600);
+
+    /* Borders */
+    --color-border-default: var(--color-gray-200);
+    --color-border-strong: var(--color-gray-300);
+    --color-border-focus: var(--color-indigo-500);
+
+    /* Brand / Primary */
+    --color-primary: var(--color-indigo-500);
+    --color-primary-hover: var(--color-indigo-600);
+    --color-primary-active: var(--color-indigo-700);
+    --color-primary-subtle: var(--color-indigo-50);
+    --color-primary-subtle-text: var(--color-indigo-600);
+    --color-on-primary: var(--color-gray-0);
+
+    /* Semantic states */
+    --color-success-bg: var(--color-success-50);
+    --color-success-text: var(--color-success-600);
+    --color-success-icon: var(--color-success-500);
+
+    --color-warning-bg: var(--color-warning-50);
+    --color-warning-text: var(--color-warning-600);
+    --color-warning-icon: var(--color-warning-500);
+
+    --color-error-bg: var(--color-error-50);
+    --color-error-text: var(--color-error-600);
+    --color-error-icon: var(--color-error-500);
+
+    --color-info-bg: var(--color-info-50);
+    --color-info-text: var(--color-info-600);
+    --color-info-icon: var(--color-info-500);
+
+    /* Focus ring (accessibility — visible keyboard focus everywhere) */
+    --color-focus-ring: rgba(79, 70, 229, 0.35);
+}

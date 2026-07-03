@@ -1,0 +1,28 @@
+/**
+ * radius.css
+ * -----------------------------------------------------------------------
+ * Part 01 — Design Tokens
+ * Border-radius utility classes.
+ * -----------------------------------------------------------------------
+ */
+
+.radius-sm {
+    border-radius: var(--radius-sm);
+}
+
+/* 8px  — badges, chips */
+.radius-md {
+    border-radius: var(--radius-md);
+}
+
+/* 12px — buttons, inputs */
+.radius-lg {
+    border-radius: var(--radius-lg);
+}
+
+/* 20px — cards */
+.radius-full {
+    border-radius: var(--radius-full);
+}
+
+/* pills, avatars */

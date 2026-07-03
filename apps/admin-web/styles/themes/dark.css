@@ -1,0 +1,29 @@
+/**
+ * dark.css
+ * ------------------------------------------------------------------
+ * Dark Theme
+ * ------------------------------------------------------------------
+ */
+
+html[data-theme="dark"] {
+
+    color-scheme: dark;
+
+    --color-bg-app: #0F172A;
+
+    --color-bg-surface: #1E293B;
+
+    --color-bg-subtle: #334155;
+
+    --color-text-primary: #F8FAFC;
+
+    --color-text-secondary: #CBD5E1;
+
+    --color-border-default: #334155;
+
+    --color-border-focus: #6366F1;
+
+    --color-primary: #6366F1;
+
+    --color-on-primary: #FFFFFF;
+}

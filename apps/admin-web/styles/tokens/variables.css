@@ -1,0 +1,152 @@
+/**
+ * variables.css
+ * -----------------------------------------------------------------------
+ * Part 01 — Design Tokens
+ * Raw token layer. Every value the design system uses is declared here
+ * ONCE. Other files (colors.css, typography.css, spacing.css, radius.css,
+ * animations.css) build semantic meaning on top of these — they should
+ * never hardcode a hex, px, or ms value themselves.
+ * -----------------------------------------------------------------------
+ */
+
+:root {
+    /* ----------------------------------------------------------------- */
+    /* Color · Primitives                                                 */
+    /* ----------------------------------------------------------------- */
+
+    /* Indigo — Primary. Enterprise, professional, not the default
+     Bootstrap blue and not dated. */
+    --color-indigo-50: #EEF0FD;
+    --color-indigo-100: #E0E3FB;
+    --color-indigo-200: #C2C7F7;
+    --color-indigo-300: #A2A9F1;
+    --color-indigo-400: #7C82EA;
+    --color-indigo-500: #4F46E5;
+    /* Primary */
+    --color-indigo-600: #4338CA;
+    --color-indigo-700: #372DAA;
+    --color-indigo-800: #2D2588;
+    --color-indigo-900: #241E6B;
+
+    /* Neutral — cool-toned gray so it sits well next to indigo. Backbone
+     of text, borders, and surfaces across all 140+ screens. */
+    --color-gray-0: #FFFFFF;
+    --color-gray-50: #F5F7FB;
+    /* App background */
+    --color-gray-100: #EEF1F6;
+    --color-gray-200: #E2E6EE;
+    --color-gray-300: #CBD2DE;
+    --color-gray-400: #9AA4B6;
+    --color-gray-500: #6B7488;
+    --color-gray-600: #4E5668;
+    --color-gray-700: #363C4B;
+    --color-gray-800: #232733;
+    --color-gray-900: #14161D;
+
+    /* Semantic states — needed across the product (forms, tables,
+     notifications) even though the auth spec only calls out primary. */
+    --color-success-50: #EAFBF1;
+    --color-success-500: #16A34A;
+    --color-success-600: #15803D;
+
+    --color-warning-50: #FFF8EB;
+    --color-warning-500: #D97706;
+    --color-warning-600: #B45309;
+
+    --color-error-50: #FDEDEE;
+    --color-error-500: #DC2626;
+    --color-error-600: #B91C1C;
+
+    --color-info-50: #EAF3FE;
+    --color-info-500: #2563EB;
+    --color-info-600: #1D4ED8;
+
+    /* ----------------------------------------------------------------- */
+    /* Typography · Primitives                                            */
+    /* ----------------------------------------------------------------- */
+
+    --font-family-sans: "Inter", "Plus Jakarta Sans", -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    --font-size-xs: 0.75rem;
+    /* 12px — captions, meta */
+    --font-size-sm: 0.875rem;
+    /* 14px — body small, labels */
+    --font-size-base: 1rem;
+    /* 16px — body */
+    --font-size-lg: 1.125rem;
+    /* 18px — emphasized body */
+    --font-size-xl: 1.25rem;
+    /* 20px — card titles */
+    --font-size-2xl: 1.5rem;
+    /* 24px — section headings */
+    --font-size-3xl: 1.875rem;
+    /* 30px — page headings */
+    --font-size-4xl: 2.25rem;
+    /* 36px — hero / welcome back */
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.7;
+
+    /* ----------------------------------------------------------------- */
+    /* Spacing · 8px rule                                                 */
+    /* ----------------------------------------------------------------- */
+
+    --space-1: 4px;
+    /* half-step, used sparingly (icon gaps) */
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+    --space-6: 40px;
+    --space-7: 48px;
+    --space-8: 64px;
+
+    /* ----------------------------------------------------------------- */
+    /* Radius                                                             */
+    /* ----------------------------------------------------------------- */
+
+    --radius-sm: 8px;
+    /* small chips, badges */
+    --radius-md: 12px;
+    /* buttons, inputs */
+    --radius-lg: 20px;
+    /* cards (auth card) */
+    --radius-full: 999px;
+
+    /* ----------------------------------------------------------------- */
+    /* Elevation                                                          */
+    /* ----------------------------------------------------------------- */
+
+    --shadow-sm: 0 1px 2px rgba(20, 22, 29, 0.04);
+    --shadow-md: 0 4px 12px rgba(20, 22, 29, 0.06);
+    --shadow-lg: 0 12px 32px rgba(20, 22, 29, 0.08);
+    /* auth card shadow */
+
+    /* ----------------------------------------------------------------- */
+    /* Motion                                                             */
+    /* ----------------------------------------------------------------- */
+
+    --duration-fast: 150ms;
+    --duration-base: 200ms;
+    --duration-slow: 300ms;
+    /* card fade-in */
+
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+
+    /* ----------------------------------------------------------------- */
+    /* Sizing — recurring control heights                                 */
+    /* ----------------------------------------------------------------- */
+
+    --control-height-md: 48px;
+    /* button, input */
+    --auth-card-width: 460px;
+}
